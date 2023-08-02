@@ -29,6 +29,8 @@ class GridViewerPlugin {
 
     // Add the plugin HTML to the viewer element
     this.addPluginHTML(viewer);
+
+    this.addGrid(viewer);
   }
 
    // Function to toggle the grid

@@ -18,9 +18,7 @@ OSDGrid is easy to use. First, there are some dependencies:
 Once the dependencies and plugin are setup, simply include them in the HTML:
 
 `
-<script src="OSDGridPlugin.js"></script>
-and stylesheet
-<link rel="stylesheet" href="../OSDGridPlugin.css">
+<script src="OSDGridPlugin.min.js"></script>
 `
 
 You will need to instantiate an OpenSeadragon viewer with the following options:
@@ -48,9 +46,14 @@ Please see the [OpenSeadragon documentation](http://openseadragon.github.io/docs
 Using the viewer, you can instantiate an instance of the plugin, which will add all the functionality to the viewer.
 
 `
-let plugin = new OSDGridPlugin(viewer);
-plugin.addGrid()
+let plugin = new OSDGridPlugin(viewer, {});
 `
+The second argument is an anonymous object containing the options for the plugin. The options available are as folows:
+
+1. `conversionFactor`: Factor to multiply by to convert to real-world units. By default this is 1.
+2. `units`: A string used to represent the units, for example, `"um"`. By default this is `"px"`.
+3. `measurementColor`: Sets the color to render measurements in. By default this is black, but using he built-in UI, there is an easy way to change colors.
+4. `useBuiltInUI`: Generates a built-in UI, including color selection, naming measurements, and buttons for other functionality.
 
 ## The UI
 
