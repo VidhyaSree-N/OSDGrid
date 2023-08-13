@@ -10,6 +10,8 @@
  * and the OpenSeadragon Fabric.js Overlay plugin
  */
 
+import './OSDGridPlugin.css';
+
 class GridViewerPlugin {
   constructor(viewer) {
     this.viewer = viewer;
@@ -31,7 +33,22 @@ class GridViewerPlugin {
     this.addPluginHTML(viewer);
 
     this.addGrid(viewer);
+
+    this.viewer.addHandler('page', () => {
+          this.resetGridAndSlider();
+    });
   }
+
+  resetGridAndSlider() {
+          const elements = ["grid-rotation-slider", "grid", "angle-display", "grid-rotation-label", "grid-size-label", "grid-size-slider", "grid-size-value"];
+          elements.forEach(element => document.getElementById(element).style.display = "none");
+          document.getElementById("grid").checked = false;
+          document.getElementById("grid-rotation-slider").value = "0";
+          document.getElementById("grid-size-slider").value = "440";
+          this.gridGroup.setAngle(0);
+          document.getElementById("angle-display").innerText = "";
+          this.gridGroup.remove(...this.gridGroup.getObjects("line"));
+      }
 
    // Function to toggle the grid
    toggleGrid() {

@@ -1,0 +1,9 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "source": "OSDGridPlugin.js",
+  "main": "dist/OSDGridPlugin.min.js",
+  "devDependencies": {
+    "parcel": "latest"
+  }
+}
