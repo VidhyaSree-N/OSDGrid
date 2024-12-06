@@ -5,6 +5,9 @@ This plugin was created as part of [the Axolotl Project](https://github.com/verr
 OSDGrid is a specialized grid tool for OpenSeadragon that adds grid and allows rotating of grid and change grid size from OpenSeadragon-compatible images easy
 and fast.
 
+![OSDGrid Plugin Screenshot](OSDGrid.png)
+*Example of the OSDGrid plugin in action.*
+
 [Click here to try it out!](https://verrochi92.github.io/axolotl/viewer.html?tileSource=W255B_0)
 
 ## Setup
